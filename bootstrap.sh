@@ -26,7 +26,7 @@ clone_next="git clone -b next-merge --depth 1"
 
 set -x
 
-$clone_next https://github.com/kripken/emscripten
+$clone_next https://github.com/kripken/emscripten emscripten/next
 $clone_next https://github.com/kripken/emscripten-fastcomp clang/fastcomp/src
 $clone_next https://github.com/kripken/emscripten-fastcomp-clang clang/fastcomp/src/tools/clang
 
@@ -39,12 +39,24 @@ set -v
 cmake ../src -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD="X86;JSBackend" -DLLVM_INCLUDE_EXAMPLES=OFF -DLLVM_INCLUDE_TESTS=OFF -DCLANG_INCLUDE_EXAMPLES=OFF -DCLANG_INCLUDE_TESTS=OFF -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly
 set +v
 
-echo "Go drink some coffee...."
+echo "Go drink some coffee or do something else, I'm building LLVM and Clang...."
 
 if [ "$threads" -gt 1 ]
 then
     echo "Using $threads threads to make this a little bit faster"
 fi
-set -v
 
+set -x
 make -j"$threads"
+set +x
+
+opt='../../../emscripten/optimizer'
+mkdir "$opt" && cd "$opt"
+
+echo "You're back ? I'm building Emscripten optimizer. Don't worry, this time it won't be long."
+set -x
+cmake ../next/tools/optimizer -DCMAKE_BUILD_TYPE=Release
+make -j"$threads"
+set +x
+
+echo "Done. Yep. No problem ! ✨"

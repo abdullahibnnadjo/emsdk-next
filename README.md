@@ -3,7 +3,11 @@ Super easy utility for installing a most up-to-date (and lightest) Emscripten de
 
 Beyond the `sdk-incoming-64bit` version you can install with the classic [emsdk](https://github.com/juj/emsdk), those simple scripts let you benefit of the latest advances from the [Emscripten project](https://kripken.github.io/emscripten-site/) (next-merge branch), like :
 - LLVM 4.0 (rc1)
-- Up-to-date working [WebAssembly](http://webassembly.org) backend for LLVM ([See details](https://github.com/WebAssembly/binaryen#cc-source--webassembly-llvm-backend--s2wasm--webassembly))
+- [Up-to-date](http://webassembly.org/roadmap/) working [WebAssembly](http://webassembly.org) backend for LLVM ([See details here](https://github.com/WebAssembly/binaryen#cc-source--webassembly-llvm-backend--s2wasm--webassembly) and [here](https://github.com/kripken/emscripten/wiki/New-WebAssembly-Backend)), avoiding [this issue](https://github.com/WebAssembly/binaryen/issues/825)
 
 Also, installing the Emscripten incoming SDK, the classic way, takes time and a lot of space on disk because of cloning full LLVM, Clang and Emscripten repos.
-Those tools try to avoid that by fetching only the latest commits.
+Those tools try to avoid that by fetching only the latest commits, and not downloading [Node.js](https://nodejs.org/en/) again, which you may already have.
+
+Be sure to have the [platform-specific requirements](https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html#platform-specific-notes), and run `./bootstrap.sh`
+
+Tested on macOS Sierra, should be running in Linux as well, and maybe in Windows with a *nix like environnement ([MinGW/MSYS](http://www.mingw.org/) ([2](http://www.msys2.org/)) or [Cygwin](https://www.cygwin.com/))
