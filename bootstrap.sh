@@ -47,7 +47,7 @@ give_info 'Start by cloning latest commit from "next-merge" branches'
 
 newline 1
 
-clone_next="git clone -b next-merge --depth 2"
+clone_next="git clone -b next-merge --depth 1"
 
 set -x
 $clone_next https://github.com/kripken/emscripten emscripten/next
