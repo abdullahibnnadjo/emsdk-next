@@ -10,4 +10,8 @@ Those tools try to avoid that by fetching only the latest commits, and not downl
 
 Be sure to have the [platform-specific requirements](https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html#platform-specific-notes), and run `./bootstrap.sh`
 
+Use `./update.sh` to pull latest changes from the Emscripten/LLVM/Clang repos and build if necessary
+
+A full installation takes typically about 45mins with 10Mb/s bandwith and a 4 threads 1.3GHz CPU, and 1.4GB on disk after building.
+
 Tested on macOS Sierra, should be running in Linux as well, and maybe in Windows with a *nix like environnement ([MinGW/MSYS](http://www.mingw.org/) ([2](http://www.msys2.org/)) or [Cygwin](https://www.cygwin.com/))
