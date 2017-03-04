@@ -102,7 +102,7 @@ emscripten/next/emcc --help
 give_info "Now, you juste have to change the path of LLVM_ROOT and add EMSCRIPTEN_NATIVE_OPTIMIZER variables in ~/.emscripten with the following values :"
 newline 1
 give_info "LLVM_ROOT='$(pwd)/clang/fastcomp/build_next/bin'"
-give_info "EMSCRIPTEN_NATIVE_OPTIMIZER='$(pwd)/emscripten/optimizer'"
+give_info "EMSCRIPTEN_NATIVE_OPTIMIZER='$(pwd)/emscripten/optimizer/optimizer'"
 newline 1
 give_info "You can also add Emscripten tools in your path"
 give_info 'PATH=$PATH:'"$(pwd)"'/emscripten/next'
