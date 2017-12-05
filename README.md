@@ -1,7 +1,7 @@
 # emsdk-next
 Super easy utility for installing a most up-to-date (and lightest) Emscripten dev environnement
 
-Beyond the `sdk-incoming-64bit` version you can install with the classic [emsdk](https://github.com/juj/emsdk), those simple scripts let you benefit of the latest advances from the [Emscripten project](https://kripken.github.io/emscripten-site/) (next-merge branch), like :
+Beyond the `sdk-incoming-64bit` version you can install with the classic [emsdk](https://github.com/juj/emsdk), those simple scripts let you benefit of the latest advances from the [Emscripten project](https://kripken.github.io/emscripten-site/) (incoming branch), like :
 - LLVM 4.0 (rc1)
 - [Up-to-date](http://webassembly.org/roadmap/) working [WebAssembly](http://webassembly.org) backend for LLVM ([See details here](https://github.com/WebAssembly/binaryen#cc-source--webassembly-llvm-backend--s2wasm--webassembly) and [here](https://github.com/kripken/emscripten/wiki/New-WebAssembly-Backend)), avoiding [this issue](https://github.com/WebAssembly/binaryen/issues/825)
 

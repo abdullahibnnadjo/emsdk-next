@@ -43,11 +43,11 @@ else
     specify
 fi
 
-give_info 'Start by cloning latest commit from "next-merge" branches'
+give_info 'Start by cloning latest commit from "incoming" branches'
 
 newline 1
 
-clone_next="git clone -b next-merge --depth 1"
+clone_next="git clone -b incoming --depth 1"
 
 set -x
 $clone_next https://github.com/kripken/emscripten emscripten/next
