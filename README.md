@@ -1,5 +1,5 @@
 # emsdk-next
-Super easy utility for installing a most up-to-date (and lightest) Emscripten dev environnement
+Super easy utility for installing an up-to-date (and lightest) Emscripten dev environnement
 
 Beyond the `sdk-incoming-64bit` version you can install with the classic [emsdk](https://github.com/juj/emsdk), those simple scripts let you benefit of the latest advances from the [Emscripten project](https://kripken.github.io/emscripten-site/) (incoming branch), like :
 - LLVM 4
